@@ -1,17 +1,56 @@
 // pages/home/home.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    name:'Elaine',
+    age:18,
+    students: [
+      { id:'001', name:'young', age:200 },
+      { id: '002', name: 'young', age: 200 },
+      { id: '003', name: 'young', age: 200 },
+      { id: '004', name: 'young', age: 200 }
+    ],
+    counter:0
+  },
+
+/**
+ * 监听页面+按钮
+ */
+handleBtnClick(){
+  //1错误做法，页面不会自动更新，但数值实际会改变
+  //this.data.counter +=1
+  //console.log(this.data.counter)
+  
+  //2.正确做法
+  this.setData({
+    counter: this.date.counter+1
+    })
+  
+},
+
+  /**
+   * 监听页面-按钮
+   */
+  handleBtnClick() {
+    //1错误做法，页面不会自动更新，但数值实际会改变
+    //this.data.counter +=1
+    //console.log(this.data.counter)
+
+    //2.正确做法
+    this.setData({
+      counter: this.date.counter - 1
+    })
 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+onLoad: function (options) {
 
   },
 

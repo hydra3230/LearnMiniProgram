@@ -1,4 +1,12 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello Young3230</text>
+<!--1.小程序的数据绑定: {{}} mustache-->
+<view>hello {{name}}</view>
+<view>my wife will be forever {{age}} years old</view>
 
-<button class="normal">youngZhang</button>
+<!--2.列表展示：wx:for-->
+<view wx:for="{{students}}">{{item.id}}-{{item.name}}-{{item.age}}</view>
+
+<!--3.事件监听，改变数据data-->
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleBtnClick">+</button>
+<button size="mini" bindtap="handleBtnMinor">-</button>
