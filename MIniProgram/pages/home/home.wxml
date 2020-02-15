@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<text class="title">Hello Young3230</text>
+
+<button class="normal">youngZhang</button>
